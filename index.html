@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priya Singh | Science Educator & B.Sc. B.Ed. Scholar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #FAF8F5;
+      --bg-card: #FFFFFF;
+      --bg-tint: #F1F5F2;
+      --primary: #1B4332;
+      --primary-light: #2D6A4F;
+      --accent: #B45309;
+      --accent-soft: #FEF3C7;
+      --text-main: #1F2937;
+      --text-muted: #52525B;
+      --border: #E5E0D8;
+      --shadow-sm: 0 2px 10px rgba(27, 67, 50, 0.05);
+      --shadow-md: 0 10px 30px rgba(27, 67, 50, 0.08);
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1.2;
+    }
+
+    /* Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 248, 245, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.15rem;
+    }
+
+    .brand-monogram {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.4rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .btn-print {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.55rem 1.05rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-print:hover {
+      background: var(--primary-light);
+      transform: translateY(-1px);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.45rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 2.65rem);
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      max-width: 650px;
+      font-size: 0.98rem;
+      margin-bottom: 2.25rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 4.5rem 0 3.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 0.38rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 1.1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 5vw, 3.8rem);
+      color: var(--primary);
+      margin-bottom: 0.65rem;
+    }
+
+    .hero-role {
+      font-size: 1.12rem;
+      font-weight: 600;
+      color: var(--primary-light);
+      margin-bottom: 1.1rem;
+    }
+
+    .hero-objective {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 1.65rem;
+      max-width: 600px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.75rem 1.4rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-light);
+    }
+
+    .btn-outline {
+      background: var(--bg-card);
+      color: var(--primary);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      padding: 0.75rem 1.35rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      background: var(--bg-tint);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat-box strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.85rem;
+      color: var(--primary);
+    }
+
+    .stat-box span {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* Profile Card */
+    .profile-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.85rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.2rem;
+    }
+
+    .avatar-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .profile-header h3 {
+      font-size: 1.45rem;
+      color: var(--primary);
+    }
+
+    .profile-header p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .quick-list {
+      list-style: none;
+      display: grid;
+      gap: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    .quick-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      border-bottom: 1px dashed var(--border);
+      padding-bottom: 0.55rem;
+    }
+
+    .quick-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .quick-list span:first-child {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .quick-list span:last-child {
+      font-weight: 600;
+      text-align: right;
+      color: var(--text-main);
+    }
+
+    /* Philosophy Section */
+    .philosophy-section {
+      background: var(--bg-tint);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .quote-box {
+      background: var(--bg-card);
+      border-left: 4px solid var(--accent);
+      padding: 1.4rem 1.75rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin-bottom: 2rem;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.65rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--bg-tint);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.38rem;
+      color: var(--primary);
+      margin-bottom: 0.55rem;
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* Experience & Internships */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.65rem;
+    }
+
+    .exp-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .exp-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .tag {
+      background: var(--bg-tint);
+      color: var(--primary);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+
+    .tag-gold {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .exp-school {
+      font-size: 0.88rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.85rem;
+    }
+
+    .exp-list {
+      margin: 0.75rem 0 1.35rem 1.1rem;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .exp-list li {
+      margin-bottom: 0.45rem;
+    }
+
+    .btn-sm {
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      padding: 0.5rem 0.95rem;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: all 0.2s;
+    }
+
+    .btn-sm:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* Teaching Aids & Awards Showcase */
+    .showcase-banner {
+      background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .showcase-banner .section-label {
+      color: #FCD34D;
+    }
+
+    .showcase-banner h3 {
+      font-size: 1.95rem;
+      color: #fff;
+      margin-bottom: 0.65rem;
+    }
+
+    .showcase-banner p {
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 0.94rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .banner-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn-gold {
+      background: #F59E0B;
+      color: #1F2937;
+      border: none;
+      padding: 0.65rem 1.15rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.86rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-gold:hover {
+      background: #FBBF24;
+    }
+
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.14);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0.65rem 1.15rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.86rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.24);
+    }
+
+    .award-box {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 1.35rem;
+    }
+
+    .award-box h4 {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      color: #FDE68A;
+    }
+
+    .award-box ul {
+      list-style: none;
+      font-size: 0.86rem;
+      color: rgba(255, 255, 255, 0.9);
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    /* Skills Matrix */
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .pill {
+      background: var(--bg-tint);
+      color: var(--primary);
+      border: 1px solid #D8E4DD;
+      padding: 0.35rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    /* Academic Timeline */
+    .timeline {
+      border-left: 2px solid var(--primary);
+      padding-left: 1.65rem;
+      margin-left: 0.5rem;
+      display: grid;
+      gap: 1.75rem;
+    }
+
+    .timeline-item {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.65rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -2.18rem;
+      top: 1.55rem;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid var(--bg-cream);
+    }
+
+    .timeline-year {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-item h3 {
+      font-size: 1.35rem;
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-item p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* Dossier Accordion */
+    details.dossier {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.65rem;
+      margin-top: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    details.dossier summary {
+      font-weight: 700;
+      color: var(--primary);
+      cursor: pointer;
+      font-size: 1rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    details.dossier summary::after {
+      content: "+";
+      font-size: 1.35rem;
+      color: var(--accent);
+    }
+
+    details.dossier[open] summary::after {
+      content: "−";
+    }
+
+    .dossier-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    .dossier-item span {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Contact & Footer */
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-actions {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .copy-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-cream);
+      border: 1px solid var(--border);
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      gap: 0.75rem;
+    }
+
+    .copy-row span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      word-break: break-all;
+    }
+
+    .btn-copy {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.42rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.86rem;
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.55);
+      display: none;
+      place-items: center;
+      padding: 1.25rem;
+      z-index: 999;
+    }
+
+    .modal-backdrop.active {
+      display: grid;
+    }
+
+    .modal-box {
+      background: var(--bg-card);
+      max-width: 620px;
+      width: 100%;
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+      position: relative;
+      max-height: 88vh;
+      overflow-y: auto;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.15rem;
+      right: 1.25rem;
+      background: var(--bg-cream);
+      border: 1px solid var(--border);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 1.15rem;
+      cursor: pointer;
+    }
+
+    .modal-tag {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      margin-bottom: 0.6rem;
+    }
+
+    .modal-box h3 {
+      font-size: 1.75rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .modal-body {
+      font-size: 0.94rem;
+      color: var(--text-main);
+    }
+
+    .modal-body p {
+      margin-bottom: 0.75rem;
+    }
+
+    .modal-body ul {
+      margin: 0.5rem 0 0.85rem 1.2rem;
+    }
+
+    .modal-body li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.2rem;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-md);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: all 0.25s;
+      z-index: 1000;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .showcase-banner,
+      .contact-card,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      header, .hero-actions, .btn-sm, .btn-gold, .btn-glass, .btn-copy, .modal-backdrop, .toast {
+        display: none !important;
+      }
+      body {
+        background: #fff;
+      }
+      section {
+        padding: 1.5rem 0;
+      }
+      .card, .profile-card, .timeline-item {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#top" class="brand">
+        <span class="brand-monogram">PS</span>
+        <span>Priya Singh</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#experience">Internships</a></li>
+        <li><a href="#showcase">Teaching Aids</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="btn-print" onclick="window.print()">Print / Save PDF</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="top" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge-pill">National Science Day 2026 — 3rd Prize Winner</div>
+        <h1>Priya Singh</h1>
+        <p class="hero-role">Aspiring Science Educator &bull; B.Sc. B.Ed. Scholar (Invertis University)</p>
+        <p class="hero-objective">
+          Dedicated to fostering curiosity, conceptual clarity, and inclusive classroom engagement through improvised low-cost teaching aids, structured lesson planning, and empathetic student mentorship.
+        </p>
+        <div class="hero-actions">
+          <a href="#experience" class="btn-primary">Explore Teaching Experience</a>
+          <a href="#contact" class="btn-outline">Get in Touch</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-box">
+            <strong>16 Weeks</strong>
+            <span>School Internship &amp; Observation</span>
+          </div>
+          <div class="stat-box">
+            <strong>3rd Prize</strong>
+            <span>Improvised Teaching Aids (2026)</span>
+          </div>
+          <div class="stat-box">
+            <strong>Bilingual</strong>
+            <span>English &amp; Hindi Instruction</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="profile-card">
+        <div class="profile-header">
+          <div class="avatar-circle">PS</div>
+          <div>
+            <h3>Educator Profile</h3>
+            <p>Faridpur, Bareilly (U.P.)</p>
+          </div>
+        </div>
+        <ul class="quick-list">
+          <li>
+            <span>Degree</span>
+            <span>B.Sc. B.Ed. (Appearing)</span>
+          </li>
+          <li>
+            <span>Institution</span>
+            <span>Invertis University, Bareilly</span>
+          </li>
+          <li>
+            <span>Teaching Focus</span>
+            <span>Science &amp; Upper Primary / Secondary</span>
+          </li>
+          <li>
+            <span>Languages</span>
+            <span>Hindi &amp; English</span>
+          </li>
+          <li>
+            <span>Availability</span>
+            <span>Open to Teaching Roles</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Teaching Philosophy -->
+  <section id="philosophy" class="philosophy-section">
+    <div class="container">
+      <span class="section-label">Pedagogical Vision</span>
+      <h2 class="section-title">Teaching Philosophy</h2>
+      <p class="section-subtitle">
+        Bridging textbook science with hands-on discovery so every learner builds confidence and analytical thinking.
+      </p>
+
+      <div class="quote-box">
+        “True learning happens when abstract scientific principles become tangible in a student's hands—transforming passive listeners into curious problem-solvers.”
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">01</div>
+          <h3>Activity-Based STEM Learning</h3>
+          <p>
+            Designing low-cost, improvised working models from everyday materials so students visualize core concepts in physics, chemistry, and biology effortlessly.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">02</div>
+          <h3>Student-Centered Inquiry</h3>
+          <p>
+            Encouraging questioning, peer discussion, and formative feedback in bilingual classrooms (English &amp; Hindi) to support diverse learning paces.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">03</div>
+          <h3>Holistic Classroom Mentorship</h3>
+          <p>
+            Cultivating discipline, punctuality, and a positive growth mindset while supporting co-curricular events, science exhibitions, and school routines.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Classroom Experience & Internships -->
+  <section id="experience">
+    <div class="container">
+      <span class="section-label">Verified School Experience</span>
+      <h2 class="section-title">Teaching Internships &amp; Observation</h2>
+      <p class="section-subtitle">
+        Hands-on school training certified by partner institutions under the Invertis Institute of Education.
+      </p>
+
+      <div class="grid-2">
+        <!-- Internship 1 -->
+        <article class="card exp-card">
+          <div>
+            <div class="exp-meta">
+              <span class="tag">14-Week Teaching Internship</span>
+              <span class="tag tag-gold">Completed Nov 2026</span>
+            </div>
+            <h3>Student Teacher Intern</h3>
+            <p class="exp-school">Lyceum Public School &bull; Station Road, Faridpur, Bareilly</p>
+            <ul class="exp-list">
+              <li>Delivered structured daily lessons, black-board demonstrations, and interactive science activities aligned with school standards.</li>
+              <li>Managed classroom discipline, homework evaluation, notebook correction, and remedial support for learners.</li>
+              <li>Contributed actively to school assemblies, co-curricular activities, and academic assessment routines.</li>
+            </ul>
+          </div>
+          <button class="btn-sm" onclick="openModal('lyceum')">View Verified Certificate Details</button>
+        </article>
+
+        <!-- Internship 2 -->
+        <article class="card exp-card">
+          <div>
+            <div class="exp-meta">
+              <span class="tag">2-Week School Observation</span>
+              <span class="tag tag-gold">B.Sc. B.Ed. IV Semester</span>
+            </div>
+            <h3>Classroom Observer &amp; Trainee</h3>
+            <p class="exp-school">Chhangamal Montessori Sr. Sec. School &bull; Faridpur, Bareilly</p>
+            <ul class="exp-list">
+              <li>Observed senior faculty teaching methodologies, lesson pacing, questioning techniques, and classroom management strategies.</li>
+              <li>Documented school administration workflows, timetable organization, and student engagement practices.</li>
+              <li>Completed all assigned instructional and observational tasks sincerely with commendation from the Principal.</li>
+            </ul>
+          </div>
+          <button class="btn-sm" onclick="openModal('chhangamal')">View Verified Certificate Details</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaching Aids & Awards Showcase -->
+  <section id="showcase" class="philosophy-section">
+    <div class="container">
+      <span class="section-label">Innovation &amp; Recognition</span>
+      <h2 class="section-title">Featured Teaching Aids &amp; Achievements</h2>
+      <p class="section-subtitle">
+        Recognized for creativity, pedagogical effectiveness, and resourcefulness in developing classroom teaching models.
+      </p>
+
+      <div class="showcase-banner">
+        <div>
+          <span class="section-label">National Science Day 2026 &bull; 3rd Prize</span>
+          <h3>Demonstration of Improvised Teaching Aids</h3>
+          <p>
+            Awarded 3rd Prize at Invertis University, Bareilly (28th February 2026) for designing and presenting low-cost, high-impact working teaching models that simplify complex science concepts for school classrooms.
+          </p>
+          <div class="banner-actions">
+            <button class="btn-gold" onclick="openModal('lessonPlan')">Preview Sample 5E Lesson Plan</button>
+            <button class="btn-glass" onclick="openModal('scienceDay')">View Achievement Certificate</button>
+          </div>
+        </div>
+        <div class="award-box">
+          <h4>Key Pedagogical Highlights</h4>
+          <ul>
+            <li>&bull; Low-cost, eco-friendly materials accessible to any school lab</li>
+            <li>&bull; Visualizes abstract concepts for faster student retention</li>
+            <li>&bull; Certified by Dean, Faculty of Education &amp; Head, Invertis Institute of Education</li>
+            <li>&bull; Ready for middle &amp; secondary school science exhibitions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educator Skills Matrix -->
+  <section id="skills">
+    <div class="container">
+      <span class="section-label">Core Competencies</span>
+      <h2 class="section-title">Educator Skills &amp; Strengths</h2>
+      <p class="section-subtitle">
+        A balanced blend of pedagogical training, classroom technology proficiency, and personal resilience.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">P</div>
+          <h3>Pedagogical Skills</h3>
+          <p>Structured instructional design tailored for active student participation.</p>
+          <div class="skill-pills">
+            <span class="pill">5E Lesson Planning</span>
+            <span class="pill">Micro-Teaching</span>
+            <span class="pill">Improvised Teaching Aids</span>
+            <span class="pill">Formative Assessment (CCE)</span>
+            <span class="pill">Classroom Management</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">D</div>
+          <h3>Digital &amp; Computer Skills</h3>
+          <p>Leveraging essential digital tools for smart-class teaching and record keeping.</p>
+          <div class="skill-pills">
+            <span class="pill">MS PowerPoint (Smart Class)</span>
+            <span class="pill">MS Word (Worksheets &amp; Tests)</span>
+            <span class="pill">MS Excel (Attendance &amp; Marks)</span>
+            <span class="pill">Digital Educational Resources</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">S</div>
+          <h3>Personal Strengths</h3>
+          <p>Professional attributes cultivated through academic rigor and school training.</p>
+          <div class="skill-pills">
+            <span class="pill">Positive Attitude &amp; Punctuality</span>
+            <span class="pill">Strong Interpersonal Skills</span>
+            <span class="pill">Adaptability &amp; Resilience</span>
+            <span class="pill">Bilingual Communication</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Qualifications & Personal Dossier -->
+  <section id="education" class="philosophy-section">
+    <div class="container">
+      <span class="section-label">Academic Background</span>
+      <h2 class="section-title">Educational Qualifications</h2>
+      <p class="section-subtitle">
+        Strong academic foundation in science and teacher education from Uttar Pradesh.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">Appearing (2023 – Present)</div>
+          <h3>Integrated B.Sc. B.Ed. (Bachelor of Science &amp; Education)</h3>
+          <p>Invertis University, Bareilly (U.P.) &mdash; Specialization in Science Pedagogy, Educational Psychology, and School Internship Training.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2023</div>
+          <h3>Intermediate (Class 12th)</h3>
+          <p>Board of High School and Intermediate Education, Uttar Pradesh (U.P. Board).</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2021</div>
+          <h3>High School (Class 10th)</h3>
+          <p>Board of High School and Intermediate Education, Uttar Pradesh (U.P. Board).</p>
+        </div>
+      </div>
+
+      <!-- Collapsible Personal Dossier -->
+      <details class="dossier">
+        <summary>Personal Dossier &amp; Official Details (Click to Expand)</summary>
+        <div class="dossier-grid">
+          <div class="dossier-item">
+            <span>Full Name</span>
+            <strong>Priya Singh</strong>
+          </div>
+          <div class="dossier-item">
+            <span>Father's Name</span>
+            <strong>Mr. Runvijay Singh</strong>
+          </div>
+          <div class="dossier-item">
+            <span>Date of Birth</span>
+            <strong>16 September 2004</strong>
+          </div>
+          <div class="dossier-item">
+            <span>Languages Known</span>
+            <strong>Hindi &amp; English</strong>
+          </div>
+          <div class="dossier-item">
+            <span>Hobbies &amp; Interests</span>
+            <strong>Reading Books, Designing Teaching Models</strong>
+          </div>
+          <div class="dossier-item">
+            <span>Permanent Address</span>
+            <strong>Vill. Sisaiya Maganpur, Tehsil Faridpur, Distt. Bareilly (U.P.) - 243503</strong>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <div>
+          <span class="section-label">Hire or Connect</span>
+          <h2 class="section-title">Available for Teaching &amp; Academic Roles</h2>
+          <p style="color: var(--text-muted); font-size: 0.96rem;">
+            Looking to connect with school principals, academic coordinators, and educational institutions for Science Teacher (TGT/PRT) opportunities in Bareilly and surrounding regions.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <div class="copy-row">
+            <span id="emailText">priyasingh783090@gmail.com</span>
+            <button class="btn-copy" onclick="copyText('priyasingh783090@gmail.com', 'Email copied!')">Copy Email</button>
+          </div>
+          <div class="copy-row">
+            <span id="phoneText">+91-9760084310</span>
+            <button class="btn-copy" onclick="copyText('+919760084310', 'Phone number copied!')">Copy Phone</button>
+          </div>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.25rem;">
+            <a href="mailto:priyasingh783090@gmail.com" class="btn-primary" style="flex: 1; justify-content: center;">Send Email</a>
+            <a href="tel:+919760084310" class="btn-outline" style="flex: 1; justify-content: center;">Call Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Priya Singh &bull; B.Sc. B.Ed. Educator Portfolio &bull; Bareilly, Uttar Pradesh</p>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="modalBackdrop" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <span class="modal-tag" id="modalTag">Certificate</span>
+      <h3 id="modalTitle">Title</h3>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+  <script>
+    const modalData = {
+      lyceum: {
+        tag: "Verified Internship Certificate",
+        title: "Fourteen-Week Teaching Internship",
+        body: `
+          <p><strong>Institution:</strong> Lyceum Public School, Station Road, Faridpur, Bareilly (U.P.)</p>
+          <p><strong>Submitted To:</strong> The Head, Invertis Institute of Education, Invertis University, Bareilly</p>
+          <p><strong>Certification Date:</strong> 13 November 2026</p>
+          <p><strong>Summary:</strong> Certified that <strong>Priya Singh</strong> (D/o Mr. Ranvijay Singh, Student of B.Sc. B.Ed.) successfully completed her <strong>Fourteen-Week Internship</strong>. Her classroom performance, instructional delivery, and professional conduct met all standards and expectations of the school.</p>
+        `
+      },
+      chhangamal: {
+        tag: "Verified School Observation Certificate",
+        title: "Two-Week School Observation",
+        body: `
+          <p><strong>Institution:</strong> Chhangamal Montessori Sr. Sec. School, Station Road, Faridpur, Bareilly (U.P.) &ndash; 243503 (Affiliated to U.P. Board, English Medium)</p>
+          <p><strong>Submitted To:</strong> The Head, Department of Education, Invertis University, Bareilly</p>
+          <p><strong>Certified By:</strong> Mr. Bharat Pandey, Principal</p>
+          <p><strong>Summary:</strong> Certified that <strong>Priya Singh</strong> (B.Sc. B.Ed. IV Semester) completed her Two-Week School Observation satisfactorily, demonstrating keen interest in learning and completing all assigned responsibilities sincerely.</p>
+        `
+      },
+      scienceDay: {
+        tag: "Certificate of Achievement & Participation",
+        title: "National Science Day 2026 — 3rd Prize",
+        body: `
+          <p><strong>Event:</strong> Demonstration of Improvised Teaching Aids (National Science Day Celebration)</p>
+          <p><strong>Date &amp; Venue:</strong> 28th February 2026, Invertis Institute of Education, Invertis University, Bareilly</p>
+          <p><strong>Achievement:</strong> Secured <strong>IIIrd (3rd) Prize</strong> for presenting an innovative, low-cost, and effective working teaching model for classroom science instruction.</p>
+          <p><strong>Signatories:</strong> Prof. R. K. Shukla (Dean, Faculty of Education), Dr. Tusharika Saxena (Head, Invertis Institute of Education), and Dr. Vaibhav Chauhan (Convenor &amp; Assistant Professor).</p>
+        `
+      },
+      lessonPlan: {
+        tag: "Sample Pedagogical Blueprint",
+        title: "5E Science Lesson Plan: States of Matter & Density",
+        body: `
+          <p><strong>Grade Level:</strong> Class 7 / 8 Science &bull; <strong>Duration:</strong> 40 Minutes &bull; <strong>Aid Used:</strong> Improvised Layered Liquid Density Column</p>
+          <ul>
+            <li><strong>1. Engage (5 min):</strong> Drop a coin, a plastic cap, and a grape into a transparent jar with layered water, oil, and honey; ask students why objects float at different levels.</li>
+            <li><strong>2. Explore (10 min):</strong> Small student groups test everyday objects in mini density cups and record observations on a bilingual worksheet.</li>
+            <li><strong>3. Explain (10 min):</strong> Connect observations to mass, volume, and density ($\rho = m/V$) using board diagrams and student vocabulary.</li>
+            <li><strong>4. Elaborate (10 min):</strong> Discuss real-world applications such as ships floating on seawater and hot-air balloons rising.</li>
+            <li><strong>5. Evaluate (5 min):</strong> Quick 3-question exit ticket and oral concept check to verify mastery.</li>
+          </ul>
+        `
+      }
+    };
+
+    function openModal(key) {
+      const item = modalData[key];
+      if (!item) return;
+      document.getElementById('modalTag').textContent = item.tag;
+      document.getElementById('modalTitle').textContent = item.title;
+      document.getElementById('modalBody').innerHTML = item.body;
+      document.getElementById('modalBackdrop').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('modalBackdrop').classList.remove('active');
+    }
+
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'modalBackdrop') closeModal();
+    }
+
+    function copyText(text, message) {
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2400);
+      });
+    }
+  </script>
+</body>
+</html>
